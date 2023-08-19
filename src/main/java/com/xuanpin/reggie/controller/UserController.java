@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.xuanpin.reggie.common.R;
 import com.xuanpin.reggie.pojo.User;
 import com.xuanpin.reggie.service.UserService;
-import com.xuanpin.reggie.utils.SampleUtils;
 import com.xuanpin.reggie.utils.ValidateCodeUtils;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
