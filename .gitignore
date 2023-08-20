@@ -32,4 +32,4 @@ build/
 ### VS Code ###
 .vscode/
 src/main/java/com/xuanpin/reggie/utils/SampleUtils.java
-resources/application.yml
+src/main/resources/application.yml
