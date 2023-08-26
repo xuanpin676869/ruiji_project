@@ -41,7 +41,7 @@ public class DishServiceImpl extends ServiceImpl<DishDao, Dish> implements DishS
         dishFlavorService.saveBatch(flavors);
     }
 
-    @Override
+    @Transactional
     public DishDto getByIdWithFlavor(Long id) {
         //查询菜品基本信息
         Dish dish = this.getById(id);
@@ -59,7 +59,7 @@ public class DishServiceImpl extends ServiceImpl<DishDao, Dish> implements DishS
      * 通过删除再添加的方式更改菜品口味
      * @param dishDto
      */
-    @Override
+    @Transactional
     public void updateWithFlavor(DishDto dishDto) {
         //更改菜品基本信息，dish
         this.updateById(dishDto);

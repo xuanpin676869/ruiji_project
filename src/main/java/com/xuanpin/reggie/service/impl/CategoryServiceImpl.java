@@ -12,6 +12,7 @@ import com.xuanpin.reggie.service.DishService;
 import com.xuanpin.reggie.service.SetmealService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class CategoryServiceImpl extends ServiceImpl<CategoryDao, Category> implements CategoryService {
@@ -24,7 +25,7 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, Category> impl
      * 根据id删除分类，删除之前进行判断
      * @param id
      */
-    @Override
+    @Transactional
     public void remove(Long id) {
         LambdaQueryWrapper<Dish> dishLambdaQueryWrapper = new LambdaQueryWrapper<>();
         dishLambdaQueryWrapper.eq(Dish::getCategoryId,id);
